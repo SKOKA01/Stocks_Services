@@ -1,0 +1,125 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Stocks/api/Stocks",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44393
+        }
+      ],
+      "Key": "stocksKey",
+      "UpstreamPathTemplate": "/api/v1.0/market/company/getall",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Stocks/api/Stocks",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44393
+        }
+      ],
+      "Key": "stocksKey",
+      "UpstreamPathTemplate": "/api/v1.0/market/company/register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Stocks/api/Stocks/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44393
+        }
+      ],
+      "Key": "stocksKey",
+      "UpstreamPathTemplate": "/api/v1.0/market/company/info/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Stocks/api/Stocks/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44393
+        }
+      ],
+      "Key": "stocksKey",
+      "UpstreamPathTemplate": "/api/v1.0/market/company/delete/{id}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/StockPriceList/api/StockPriceList/{code}/{startdate}/{enddate}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44374
+        }
+      ],
+      "Key": "stocksKey",
+      "UpstreamPathTemplate": "/api/v1.0/market/company/stockprice/{code}/{startdate}/{enddate}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/StockPriceList/api/StockPriceList/{code}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44374
+        }
+      ],
+      "Key": "stocksKey",
+      "UpstreamPathTemplate": "/api/v1.0/market/company/stockprice/{code}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/StockPriceList/api/StockPriceList",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44374
+        }
+      ],
+      "Key": "stocksKey",
+      "UpstreamPathTemplate": "/api/v1.0/market/company/getallstocks",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/StockPriceList/api/StockPriceList/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44374
+        }
+      ],
+      "Key": "stocksKey",
+      "UpstreamPathTemplate": "/api/v1.0/market/stock/add",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/StockPriceList/api/StockPriceList/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44374
+        }
+      ],
+      "Key": "stocksKey",
+      "UpstreamPathTemplate": "/api/v1.0/market/stock/delete/{id}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:44331"
+  }
+}
+
